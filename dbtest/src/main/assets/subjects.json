@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Algebra",
+        "credits": 3,
+        "category": "MATH"
+    },
+    {
+        "name": "Trigonometry",
+        "credits": 3,
+        "category": "MATH"
+    },
+    {
+        "name": "Physics",
+        "credits": 3,
+        "category": "SCIENCE"
+    },
+    {
+        "name": "Chemistry",
+        "credits": 3,
+        "category": "SCIENCE"
+    },
+    {
+        "name": "Psychology",
+        "credits": 2,
+        "category": "SOFT"
+    },
+    {
+        "name": "Social Studies",
+        "credits": 1,
+        "category": "SOFT"
+    },
+    {
+        "name": "Geography",
+        "credits": 3,
+        "category": "SCIENCE"
+    }
+]
