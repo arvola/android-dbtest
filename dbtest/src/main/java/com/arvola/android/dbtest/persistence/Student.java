@@ -1,5 +1,7 @@
 package com.arvola.android.dbtest.persistence;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Calendar;
 import java.util.List;
 
@@ -70,6 +72,9 @@ public class Student {
     }
 
     public static enum Gender {
-        MALE, FEMALE
+        @SerializedName("Male")
+        MALE,
+        @SerializedName("Female")
+        FEMALE
     }
 }

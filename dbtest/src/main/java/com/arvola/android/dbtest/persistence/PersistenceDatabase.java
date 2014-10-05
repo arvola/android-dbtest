@@ -3,6 +3,11 @@ package com.arvola.android.dbtest.persistence;
 import android.content.Context;
 import com.arvola.android.dbtest.Database;
 import com.codeslap.persistence.*;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.List;
 
 /**
  * https://github.com/casidiablo/persistence
@@ -10,6 +15,8 @@ import com.codeslap.persistence.*;
 public class PersistenceDatabase implements Database {
 
     Context context;
+
+    List<Student> students;
 
     public PersistenceDatabase(Context context) {
         this.context = context;
@@ -25,27 +32,30 @@ public class PersistenceDatabase implements Database {
 
         SqlAdapter adapter = Persistence.getAdapter(context);
 
+        // This seems to be required for the actual database to be created
         adapter.findFirst(Subject.class, "", null);
+    }
+
+    @Override
+    public void loadStudents(Gson gson, String json) {
+        Type collectionType = new TypeToken<List<Student>>(){}.getType();
+        students = gson.fromJson(json, collectionType);
     }
 
     @Override
     public void addData() {
         SqlAdapter adapter = Persistence.getAdapter(context);
 
-        School west = new School();
-        west.setName("West");
-        adapter.store(west);
+        School school = new School();
+        school.setName("Foo");
 
-        School east = new School();
-        east.setName("East");
-        adapter.store(east);
+        adapter.store(school);
 
-        Grade west1 = new Grade();
-        west1.setSchool(west);
-        west1.setGrade(1);
-        adapter.store(west1);
+        Grade grade = new Grade();
+        grade.setGrade(1);
 
-        west.getGrades().add(west1);
-        adapter.store(west);
+        adapter.store(grade, school);
+
+        adapter.storeCollection(students, grade, null);
     }
 }

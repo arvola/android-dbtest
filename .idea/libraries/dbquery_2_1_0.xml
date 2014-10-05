@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="dbquery-2.1.0">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/dbtest/build/exploded-aar/com.bingzer.android.dbv/dbquery/2.1.0/res" />
-      <root url="jar://$PROJECT_DIR$/dbtest/build/exploded-aar/com.bingzer.android.dbv/dbquery/2.1.0/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/build/intermediates/exploded-aar/com.bingzer.android.dbv/dbquery/2.1.0/res" />
+      <root url="jar://$PROJECT_DIR$/build/intermediates/exploded-aar/com.bingzer.android.dbv/dbquery/2.1.0/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

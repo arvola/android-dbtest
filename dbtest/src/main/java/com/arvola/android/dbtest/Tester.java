@@ -4,9 +4,11 @@ import android.util.Log;
 
 public class Tester {
     Database database;
+    JsonLoader loader;
 
-    public Tester(Database db) {
+    public Tester(Database db, JsonLoader loader) {
         database = db;
+        this.loader = loader;
     }
 
     public void runCreate() {
@@ -19,6 +21,8 @@ public class Tester {
     }
 
     public void runAddData() {
+        database.loadStudents(loader.getGson(), loader.loadStudents());
+
         recordMeasurement("addData", measureCall(new Runnable() {
             @Override
             public void run() {

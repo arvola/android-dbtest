@@ -5,7 +5,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.ideaLibSources/persistence-0.9.24-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeslap/persistence/0.9.24/bdbd301dd13d738d8c868835108f4902c5e2836a/persistence-0.9.24-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

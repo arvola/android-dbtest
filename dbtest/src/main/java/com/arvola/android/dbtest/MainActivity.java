@@ -12,7 +12,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         PersistenceDatabase persistence = new PersistenceDatabase(getApplicationContext());
-        Tester tester = new Tester(persistence);
+        Tester tester = new Tester(persistence, new JsonLoader(getApplicationContext()));
         tester.runCreate();
         tester.runAddData();
 
